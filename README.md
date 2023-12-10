@@ -17,7 +17,7 @@ OPENAI_ORG=<>
 
 ## Run React Native
 - Open the `logo-ai` dir and create a `.env` file in the root dir of the `logo-ai` dir and add the code below to it.
-- I recommend using [ngrok](https://ngrok.com/) to host the backend locally and get the live url or use other services.
+- I recommend using [ngrok](https://ngrok.com/) to host the backend locally and get the live url or use other services as the app wont accept a `localhost` url.
 
 ```dotenv
 EXPO_PUBLIC_API_URL=<ADD URL OF LIVE BACKEND HERE>
