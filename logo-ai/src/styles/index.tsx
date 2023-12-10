@@ -35,6 +35,9 @@ export const textStyles = StyleSheet.create({
     fontWeight: "bold",
     color: colors.darkRed,
   },
+  textWhite: {
+    color: colors.white,
+  },
 });
 
 export const styles = StyleSheet.create({
@@ -53,7 +56,7 @@ export const styles = StyleSheet.create({
   screen: {
     flex: 1,
     paddingHorizontal: 25,
-    paddingVertical: 25,
+    marginVertical: 20,
     paddingBottom: 25,
   },
   itemsCenter: {
@@ -93,12 +96,23 @@ export const styles = StyleSheet.create({
     borderColor: colors.darkRed,
   },
   logoContainer: {
-    width: "50%",
+    flex: 1 / 2,
     borderRadius: 12,
     overflow: "hidden",
+    position: "relative",
   },
-  logos: { width: "100%", height: 150, marginBottom: 12, borderRadius: 12 },
+  logos: {
+    width: "100%",
+    height: 150,
+    borderRadius: 12,
+  },
   floatingSaveButton: { position: "absolute", right: 10, top: 10 },
+  floatingDelButton: {
+    backgroundColor: "red",
+    borderRadius: 5,
+    paddingVertical: 5,
+    paddingHorizontal: 10,
+  },
   floatingButtonContainer: {
     position: "absolute",
     width: "100%",

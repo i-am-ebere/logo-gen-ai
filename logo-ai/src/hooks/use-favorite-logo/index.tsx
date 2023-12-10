@@ -5,7 +5,7 @@ import { nanoid } from "nanoid";
 
 export function useFavoriteLogo() {
   const favLogosDir = FileSystem.documentDirectory + "logos/";
-  const favLogo = (logoId: string) => favLogosDir + `fav_ai_logo_${logoId}.png`;
+  const favLogo = (logoId: string) => favLogosDir + `fav_ai_logo_${logoId}.jpg`;
   const [logos, setLogos] = React.useState<string[]>([]);
   const [errorMessage, setErrorMessage] = React.useState<string>("");
   const [message, setMessage] = React.useState<string>("");
@@ -48,7 +48,7 @@ export function useFavoriteLogo() {
       await ensureDirExists();
       const dirFileName = await FileSystem.readDirectoryAsync(favLogosDir);
       const filesWithDirName = dirFileName.map(
-        (file) => `${favLogosDir}/${file}`,
+        (file) => `${favLogosDir}${file}`,
       );
       setLogos(filesWithDirName);
     } catch (e) {

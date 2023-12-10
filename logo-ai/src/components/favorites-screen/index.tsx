@@ -10,6 +10,7 @@ export function FavoritesScreen() {
       await getSaveLogos();
     })();
   }, []);
+
   return (
     <View style={styles.screen}>
       <Text style={textStyles.header}>Favorite Logos </Text>
@@ -17,8 +18,14 @@ export function FavoritesScreen() {
         ListEmptyComponent={<Text>You dont have any favorite logos yet</Text>}
         data={logos}
         numColumns={2}
+        style={{ flex: 1 }}
+        contentContainerStyle={{
+          justifyContent: "space-between",
+          gap: 5,
+          marginBottom: 5,
+        }}
         renderItem={({ item }) => (
-          <View style={{ borderRadius: 12 }} testID={"logos"}>
+          <View style={styles.logoContainer} testID={"logos"}>
             <Image
               resizeMode={"cover"}
               style={styles.logos}
@@ -28,14 +35,7 @@ export function FavoritesScreen() {
               style={styles.floatingSaveButton}
               onPress={() => deleteLogoFile(item)}
             >
-              <View
-                style={{
-                  backgroundColor: "red",
-                  borderRadius: 5,
-                  paddingVertical: 5,
-                  paddingHorizontal: 10,
-                }}
-              >
+              <View style={styles.floatingDelButton}>
                 <Text style={{ color: "white" }}>X</Text>
               </View>
             </TouchableOpacity>
