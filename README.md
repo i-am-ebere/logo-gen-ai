@@ -1,30 +1,27 @@
 ## React Native Logo AI Generator with Open AI
 
-### Installation
-- Create an account by visiting `openai.com`
-- After creating an account: 
-  - [Get OPENAI_API_KEY](https://platform.openai.com/api-keys)
-  - [Get OPENAI_ORG](https://platform.openai.com/account/organization)
-- Change directory to the `backend`  and create a `.env` file and add the following variables to it.
+### Launch Backend
+- Sign up at openai.com.
+- After registration:
+  - [Obtain OPENAI_API_KEY](https://platform.openai.com/api-keys)
+  - [Retrieve OPENAI_ORG](https://platform.openai.com/account/organization) 
+- Navigate to the backend directory, create a .env file, and include the following variables:
 ```dotenv
 PORT=4001
-OPENAI_API_KEY=<>
-OPENAI_ORG=<>
+OPENAI_API_KEY=<YOUR_API_KEY>
+OPENAI_ORG=<YOUR_ORG_KEY>
 ```
-- Open the backend dir in your shell (terminal)
-- After these have been created and added to the `.env` run `yarn install` or `npm install` from the backend dir.
-- After successful installation run `yarn dev` or `npm dev` to run the backend. If this successfully starts up you should see `Node app running on 4001` in your terminal
+- Open your shell (terminal) in the backend directory.
+- Once the .env file is set up, execute yarn install or npm install.
+- Upon successful installation, run yarn dev or npm dev to start the backend. A successful startup will display Node app running on 4001 in your terminal.
 
-## Run React Native
-- Open the `logo-ai` dir and create a `.env` file in the root dir of the `logo-ai` dir and add the code below to it.
-- I recommend using [ngrok](https://ngrok.com/) to host the backend locally and get the live url or use other services as the app wont accept a `localhost` url.
-
+### Launch React Native App
+In the logo-ai directory, create a `.env` file at the root and add the following code:
+For hosting the backend locally, consider using [ngrok](https://ngrok.io) to obtain a live URL, as the app does not accept localhost URLs.
 ```dotenv
-EXPO_PUBLIC_API_URL=<ADD URL OF LIVE BACKEND HERE>
+EXPO_PUBLIC_API_URL=<ADD_LIVE_BACKEND_URL_HERE>
 ```
-- After this is completed `yarn install && yarn start` or `npm install && npm start`
-- As long as you are on the same network as your machine scan the QR code on the terminal with your expo app [iOS](https://apps.apple.com/us/app/expo-go/id982107779) [Android](https://play.google.com/store/apps/details?id=host.exp.exponent&hl=en_US)
-
-### NOTE
-- Due to cost of OpenAI, there is a 2 requests per min rate limiter for the backend.
-
+- Once the setup is complete, run `yarn install && yarn start` or `npm install && npm start`.
+- If you are on the same network as your machine, scan the QR code on the terminal with your Expo app:  [iOS](https://apps.apple.com/us/app/expo-go/id982107779) [Android](https://play.google.com/store/apps/details?id=host.exp.exponent&hl=en_US).
+### IMPORTANT
+Due to OpenAI costs, there is a rate limiter of 2 requests per minute for the backend.
