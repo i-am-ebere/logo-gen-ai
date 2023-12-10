@@ -23,4 +23,5 @@ OPENAI_ORG=<>
 EXPO_PUBLIC_API_URL=<ADD URL OF LIVE BACKEND HERE>
 ```
 - After this is completed `yarn install && yarn start` or `npm install && npm start`
+- As long as you are on the same network as your machine scan the QR code on the terminal with your expo app [iOS](https://apps.apple.com/us/app/expo-go/id982107779) [Android](https://play.google.com/store/apps/details?id=host.exp.exponent&hl=en_US)
 
