@@ -1,0 +1,19 @@
+{
+  "exclude": [
+    "./dist",
+    " src/**/*.test.ts"
+  ],
+  "compilerOptions": {
+    "target": "es2016",
+    "lib": ["es5", "es6", "dom"],
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "outDir": "./dist",
+    "module": "commonjs",
+    "baseUrl": "src/",
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true,
+    "strict": true
+  }
+}
