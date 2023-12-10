@@ -105,7 +105,7 @@ export function SearchScreen() {
       )}
       <View style={{ flexDirection: "row", flexWrap: "wrap" }}>
         {(generateLogoMutation.data || []).map((img) => (
-          <View style={{ borderRadius: 12 }} key={img.url} testID={"logos"}>
+          <View style={styles.logoContainer} key={img.url} testID={"logos"}>
             <Image
               resizeMode={"cover"}
               style={styles.logos}

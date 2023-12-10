@@ -38,9 +38,15 @@ server.post("/api/v1/images", async (req: ImageRequest, res: Response) => {
         message: "Company name or company sector is invalid",
       });
     }
+    let prompt = `create a`;
+    prompt += `${
+      req.body.companySector !== "others"
+        ? `${req.body.companySector} vector logo for a company called ${req.body.companyName}`
+        : `vector logo for a company called ${req.body.companyName}`
+    }`;
     const result = await openaiClient.images.generate({
       model: "dall-e-2",
-      prompt: `create a vector logo for ${req.body.companyName} sector called ${req.body.companySector}`,
+      prompt: prompt,
       size: "256x256",
       n: 3,
     });
