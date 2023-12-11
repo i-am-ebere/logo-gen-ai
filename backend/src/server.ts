@@ -53,7 +53,9 @@ server.post("/api/v1/images", async (req: ImageRequest, res: Response) => {
     return res.status(StatusCodes.OK).json(result.data);
   } catch (e) {
     console.log(e);
-    res.status(StatusCodes.SERVICE_UNAVAILABLE).json({});
+    res
+      .status(StatusCodes.SERVICE_UNAVAILABLE)
+      .json({ message: "Service unavailable" });
   }
 });
 
