@@ -2,7 +2,6 @@ import express, { Application, Request, Response } from "express";
 import cors from "cors";
 import { getReasonPhrase, StatusCodes } from "http-status-codes";
 import { rateLimit } from "express-rate-limit";
-import { redis } from "./utilz/redis-config";
 
 import { config } from "dotenv";
 import { openaiClient } from "./utilz/openai";
