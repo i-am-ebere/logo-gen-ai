@@ -6,7 +6,7 @@ jest.mock("../../../hooks/use-favorite-logo");
 
 import { useFavoriteLogo } from "../../../hooks/use-favorite-logo";
 
-describe("<SearchScreen />", () => {
+describe("<FavoritesScreen />", () => {
   it("should not display any images on component render", () => {
     when(useFavoriteLogo).mockReturnValue({
       getSaveLogos: jest.fn(),
