@@ -42,4 +42,28 @@ describe("<SearchScreen />", () => {
     render(<SearchScreen />);
     expect(screen.queryAllByTestId("logos")).toHaveLength(3);
   });
+
+  it("should display error if generate image returns error", () => {
+    //@ts-ignore -- only using expected fields for test
+    when(useFavoriteLogo).mockReturnValue({
+      message: "",
+    });
+    //@ts-ignore -- only using expected fields for test
+    when(useGenerateLogoMutation).mockReturnValue({
+      isPending: false,
+      data: undefined,
+      error: {
+        //@ts-ignore -- only using expected fields for test
+        response: {
+          status: 429,
+          data: {
+            message: "Too many requests",
+          },
+        },
+      },
+    });
+    render(<SearchScreen />);
+
+    expect(screen.getByText("Too many requests"));
+  });
 });

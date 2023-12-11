@@ -20,6 +20,7 @@ describe("<FavoritesScreen />", () => {
     render(<FavoritesScreen />);
 
     expect(screen.queryAllByTestId("logos")).toHaveLength(0);
+    expect(screen.getByText("You dont have any favorite logos yet"));
   });
 
   it("should display three images on load", () => {
