@@ -22,7 +22,7 @@ describe("<SearchScreen />", () => {
     expect(screen.queryAllByTestId("logos")).toHaveLength(0);
   });
 
-  it("should not display any images on load", () => {
+  it("should display three images on load", () => {
     when(useFavoriteLogo).mockReturnValue({
       getSaveLogos: jest.fn(),
       saveLogoFile: jest.fn(),

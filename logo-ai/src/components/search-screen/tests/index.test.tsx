@@ -24,7 +24,7 @@ describe("<SearchScreen />", () => {
     expect(screen.queryAllByTestId("logos")).toHaveLength(0);
   });
 
-  it("should not display any images on load", () => {
+  it("should display three images on load", () => {
     //@ts-ignore -- only using expected fields for test
     when(useFavoriteLogo).mockReturnValue({
       message: "",
